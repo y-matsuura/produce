@@ -1,0 +1,76 @@
+================================
+4dd_suumo
+アンケートシステム
+================================
+[これまで]
+アンケートの基盤（質問・回答収集）するシステムは存在していたが、
+そこに至るまでのシステム（来場回数は何回で、お客さんはだれで）は都度つくっていた。
+
+[今回]
+どの住宅展示（※プロジェクトと呼ばれる）でも使えるような汎用的なアンケートシステムをつくる。
+基盤までの導線となるフロントのシステム・システムを使うアカウントやプロジェクトの追加更新をおこなう管理画面・プロジェクトにひもづくアンケートを設定する管理画面をもつバックエンドのシステムをつくる。
+
+[構成]
+Java 1.8
+springboot 2.0.3
+postgres 10
+dbflute 1.1.8
+findbugs 3.0.1
+checkstyle
+
+jenkins
+redmine
+git
+
+
+[個人環境]
+・Vagrant + docker-compose で postgres たてる
+※Docker for Windows を使ってpostgres たてていたが、
+Ansible を勉強するために Vagrant を使いたくなったので、ローカルに入れて vagrant up したところ Windows が落ちる。
+Hyper-V と Virtualbox が競合するためだそう。
+環境差異をなくすために仮想環境を勉強しているので、Docker for Windows ではそもそもWindows10 Pro 以降でしか使えないし、
+チーム全体の環境を統一する目的から離れるので、Hyper-Vを無効にして、Virtualbox と Vagrant をインストールして、
+その上に Docker コンテナで DB 環境をつくるように変更した。
+
+・IntelliJ 使う
+これまでずっと eclipse を使ってきたが、IntelliJ の評判を聞いて、今回のプロジェクトで思い切って変更した。
+試用期限が切れる直前に半額キャンペーンを知って、All Products Pack を半額で購入した。
+
+
+
+================================
+Cloundn
+================================
+[今回]
+CloundnのDNSとRDBサービスの保守
+既知の不具合を修正する。
+
+[構成]
+centOS：6.5
+ruby：2.2.2p95
+rails：4.1.1
+MySQL：5.5.30
+Apache：2.2
+Passenger：4.0.59
+
+Cloundn
+Confluence
+JIRA
+
+
+
+管理用VM
+java: 1.7.0_65
+apache: 2.2.15
+tomcat: 7.0.54
+ruby: 2.2.2
+rails: 4.1.1
+passenger: 4.0.59
+DB・Jenkins用VM
+mysql: 5.5.30
+java: 1.8.0_181
+jenkins: 2.138.1
+
+
+
+
