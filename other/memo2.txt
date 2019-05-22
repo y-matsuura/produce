@@ -1,0 +1,47 @@
+[参考]
+https://qiita.com/genreh/items/5ca16775442f3e3a355a
+
+// Tomcatを停止する
+$ sudo service tomcat stop
+
+// インストールできるjdkを確認
+$ yum search java | grep openjdk
+
+// インストールする
+$ sudo yum install java-1.8.0-openjdk-devel.x86_64
+※インストールするバージョンやjre or jdk などはその都度検討で。
+
+// バージョンを確認する
+$ java -version
+
+// alternativesに登録されているバージョンと現在のJavaのバージョンを確認する
+$ sudo alternatives --config java
+
+// setenvでJavaにパスを通したいので、setenvにJAVA_HOMEを追加
+$ vi ~/tomcat/apache-tomcat-7.0.93/bin/setenv.sh
+（例）
+JAVA_HOME="/usr/lib/jvm/jre-1.8.0-openjdk.x86_64"
+
+// Tomcatを起動する
+$ sudo service tomcat start
+
+// TomcatのJavaバージョンを確認する
+$ ps aux | grep tomcat
+
+// Tomcatを停止する
+$ sudo service tomcat stop
+
+// alternativesからJava8を削除する
+$ alternatives --remove java /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
+（例）
+sudo alternatives --remove java /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
+
+// alternativesから削除されていることを確認する
+$ sudo alternatives --config java
+$ java -version
+
+// Tomcatを起動する
+$ sudo service tomcat start
+
+// TomcatのJavaバージョンを確認する
+$ ps aux | grep tomcat
