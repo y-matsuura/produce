@@ -71,6 +71,20 @@ mysql: 5.5.30
 java: 1.8.0_181
 jenkins: 2.138.1
 
+DNS
+JDKバージョンアップ対応
+oraclejdk 1.7 ⇒ openjdk 1.8
+Tomcat 7.0.54 ⇒ 8.5.40
+Camel 2.13.0 ⇒ 2.23.2
+Spring 3.2.8.RELEASE ⇒ 5.1.2.RELEASE
+Jetty 8.1.14.v20131031 ⇒ 9.4.12.v20180830
+
+RDB
+Rubyバージョンアップ対応
+2.4.5 ⇒ 2.6.3
 
 
+
+Vue.jsのハンズオン実施
+https://qiita.com/moonglows76/items/358ef3cd1566c38ece3a
 
